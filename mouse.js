@@ -34,6 +34,7 @@ for (i = 0; i <= week.length;i++){
         for(c = 0 ; c <= 4;c++)
 
          output += `tiết ` + tiet +`: `+ MH[week[i][c]]+"<br>"+ '<br>'
+        tiet++
     }
     document.getElementById('MH1').innerHTML = output
 }}
