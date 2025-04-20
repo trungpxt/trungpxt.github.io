@@ -22,7 +22,7 @@ let getdatabeta =()=>{
     if(check > 1){
         return check
     }if(check == 1){
-        alert("vui lòng chon thứ bố mày mới biết")
+        alert("vui lòng chọn thứ mà bạn muốn xem")
     }
     
 }
