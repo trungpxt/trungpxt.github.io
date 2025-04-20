@@ -1,12 +1,12 @@
 var text = new Date()
 let date = text.getDay()
 console.log(date)
-//              1     2       3     4       5       6           7           8
+//           0     1     2       3     4       5       6           7           8
 var MH = ['',"toán",'văn', "anh",'tin','công nghệ','GDKTPT', "lịch sử", "vật lí"]
 var week = [
     [],
     [],
-    [7,4,4,3,],
+    [7,4,4,3],
     [5,5,6,6,8],
     [4,2,2,3,3],
     [3,3,1,1,1],
@@ -26,18 +26,27 @@ let getdatabeta =()=>{
     }
     
 }
-let dick =(backdata)=>{
-    var output = "";
-    
-for (i = 0; i <= week.length;i++){
-    if(i == backdata){
-        for(c = 0 ; c <= 4;c++)
-        let tiet = c + 1
-         output += `tiết ` + tiet +`: `+ MH[week[i][c]]+"<br>"+ '<br>'
-        
+//
+let dick = (payback)=>{
+    var printdatabase = ""
+    for (i = 0; i < week[payback].length;i++){
+        let thututiethoc = i+1;
+        printdatabase += `tiết `+ thututiethoc+` : `+MH[week[payback][i]]+"<br>"+`<br>`
     }
-    document.getElementById('MH1').innerHTML = output
-}}
+    document.getElementById('MH1').innerHTML = printdatabase
+}
+//
+// let dick =(backdata)=>{
+//     var output = "";
+//     let tiet = 0;
+// for (i = 0; i <= week.length;i++){
+//     if(i == backdata){
+//         for(c = 0 ; c <= 4;c++)
+//             let sotiet  = c+1;
+//          output += `tiết ` + sotiet +`: `+ MH[week[i][c]]+"<br>"+ '<br>'
+//     }
+//     document.getElementById('MH1').innerHTML = output
+// }}
 var new_date= new Date()
 setInterval(check_weekday,1000)
 
@@ -49,6 +58,28 @@ function check_weekday (){
 
     }
 }
+
+// //a
+// let new_date = new Date()
+// let time = new_date.getDay()
+// console.log(time)
+// let get = ()=>{
+//     var minidemo = document.getElementById("demo").value
+//     return minidemo;
+// }
+//
+// let run = (a)=>{
+//     let dataprint =""
+//     for(i=0;i < week[a].length;i++){
+//         let sotiet = i+1;
+//         dataprint += `tiết` + sotiet +`:` + monhoc[week[a][i]] + `<br>`
+//         document.getElementById("idprint").innerHTML=monhoc[week[a][i]]
+//     }
+//     document.getElementById("idprint").innerHTML=dataprint
+// }
+//
+//
+// b
 
 function updateTime() {
     const now = new Date();
