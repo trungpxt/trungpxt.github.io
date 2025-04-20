@@ -28,13 +28,13 @@ let getdatabeta =()=>{
 }
 let dick =(backdata)=>{
     var output = "";
-    let tiet = 1
+    
 for (i = 0; i <= week.length;i++){
     if(i == backdata){
         for(c = 0 ; c <= 4;c++)
-
+        let tiet = c + 1
          output += `tiết ` + tiet +`: `+ MH[week[i][c]]+"<br>"+ '<br>'
-        tiet++
+        
     }
     document.getElementById('MH1').innerHTML = output
 }}
